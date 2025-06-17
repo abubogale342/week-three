@@ -68,6 +68,8 @@ With a solid understanding of our data's shape, we are now moving into the next 
     .venv/bin/python generate_plots.py
     ```
 
-## EDA Report
+## 📊 Interactive EDA Report
 
-[![Open in Netlify](https://img.shields.io/badge/View_Full_Report-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://gleeful-lokum-34e0e9.netlify.app/)
+Explore the interactive report directly in your browser:
+
+[![Open in GitHub Pages](https://img.shields.io/badge/🚀_View_Interactive_Report-181717?style=for-the-badge&logo=github&logoColor=white)](https://abubogale342.github.io/week-three/)
