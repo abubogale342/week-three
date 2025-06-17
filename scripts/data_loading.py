@@ -12,12 +12,15 @@ df = pd.read_csv("data/MachineLearningRating_v3.txt", sep="|")
 # print("\nSummary Statistics:\n")
 # # print(df.describe())
 
-# print("\nTotal Number of data points:", len(df))
+print("\nTotal Number of data points:", len(df))
 
-# missing_pct = (df.isnull().sum() / len(df)) * 100
-# cols_to_drop = missing_pct[missing_pct > 90].index
+missing_pct = (df.isnull().sum() / len(df)) * 100
+cols_to_drop = missing_pct[missing_pct > 90].index
 
-# df_cleaned = df.drop(columns=cols_to_drop)
+# save cleaned data as replace and track with dvc and git 
+df_cleaned = df.drop(columns=cols_to_drop)
+df_cleaned.to_csv("data/MachineLearningRating_v3.txt", sep="|", index=False)
+
 
 # print("\nNumber of Missing Values in Each Column After Dropping Columns with > 90% Missing Values:\n")
 # print(df_cleaned.isnull().sum())
