@@ -68,7 +68,7 @@ With a solid understanding of our data's shape, we are now moving into the next 
     .venv/bin/python generate_plots.py
     ```
 
-## 📊 Interactive EDA Report
+## 📊 EDA Report
 
 Explore the interactive report:
 
