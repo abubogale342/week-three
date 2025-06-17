@@ -70,6 +70,6 @@ With a solid understanding of our data's shape, we are now moving into the next 
 
 ## 📊 Interactive EDA Report
 
-Explore the interactive report directly in your browser:
+Explore the interactive report:
 
 [![Open in GitHub Pages](https://img.shields.io/badge/🚀_View_Interactive_Report-181717?style=for-the-badge&logo=github&logoColor=white)](https://abubogale342.github.io/week-three/)
