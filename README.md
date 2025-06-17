@@ -68,8 +68,11 @@ With a solid understanding of our data's shape, we are now moving into the next 
     .venv/bin/python generate_plots.py
     ```
 
-## 📊 Interactive EDA Report
+<details>
+<summary>📊 Click to view EDA Report</summary>
+<br>
 
-Explore the interactive report directly in your browser:
+![EDA Preview](https://via.placeholder.com/800x600.png?text=EDA+Report+Preview)
+_Interactive version: [Open Full Report](https://abubogale342.github.io/week-three/)_
 
-[![Open in GitHub Pages](https://img.shields.io/badge/🚀_View_Interactive_Report-181717?style=for-the-badge&logo=github&logoColor=white)](https://abubogale342.github.io/week-three/)
+</details>
