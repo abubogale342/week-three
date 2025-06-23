@@ -1,0 +1,7 @@
+{
+  "test": "Kruskal-Wallis",
+  "h_statistic": 106.09273218457658,
+  "p_value": 2.4146571363417815e-19,
+  "effect_size": 0.03529785253133378,
+  "significant": true
+}

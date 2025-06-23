@@ -1,0 +1,37 @@
+group1,group2,meandiff,p-adj,lower,upper,reject
+Eastern Cape,Free State,5137.1278,1.0,-34672.4563,44946.7119,False
+Eastern Cape,Gauteng,-4884.6549,0.994,-22106.5283,12337.2186,False
+Eastern Cape,KwaZulu-Natal,2480.9542,1.0,-15277.6613,20239.5697,False
+Eastern Cape,Limpopo,-11957.2391,0.77,-34296.7981,10382.3199,False
+Eastern Cape,Mpumalanga,-11148.9799,0.7241,-31084.3398,8786.3801,False
+Eastern Cape,North West,-10165.0662,0.718,-28240.6695,7910.537,False
+Eastern Cape,Northern Cape,-15942.2197,0.9761,-61460.733,29576.2936,False
+Eastern Cape,Western Cape,967.3166,1.0,-17043.8917,18978.5249,False
+Free State,Gauteng,-10021.7827,0.9949,-46213.3234,26169.758,False
+Free State,KwaZulu-Natal,-2656.1736,1.0,-39106.1821,33793.8349,False
+Free State,Limpopo,-17094.3669,0.911,-55982.5475,21793.8137,False
+Free State,Mpumalanga,-16286.1077,0.9173,-53844.7721,21272.5567,False
+Free State,North West,-15302.194,0.9323,-51907.6872,21303.2991,False
+Free State,Northern Cape,-21079.3475,0.9611,-76623.6518,34464.9569,False
+Free State,Western Cape,-4169.8112,1.0,-40743.5493,32403.9269,False
+Gauteng,KwaZulu-Natal,7365.6091,0.0099,1010.0556,13721.1626,True
+Gauteng,Limpopo,-7072.5842,0.871,-22041.9038,7896.7354,False
+Gauteng,Mpumalanga,-6264.325,0.7104,-17329.7311,4801.0811,False
+Gauteng,North West,-5280.4114,0.3555,-12474.3023,1913.4796,False
+Gauteng,Northern Cape,-11057.5648,0.9966,-53448.1261,31332.9965,False
+Gauteng,Western Cape,5851.9715,0.1937,-1178.5519,12882.4949,False
+KwaZulu-Natal,Limpopo,-14438.1933,0.095,-30022.032,1145.6455,False
+KwaZulu-Natal,Mpumalanga,-13629.9341,0.0113,-25513.482,-1746.3861,True
+KwaZulu-Natal,North West,-12646.0204,0.0001,-21044.0897,-4247.9512,True
+KwaZulu-Natal,Northern Cape,-18423.1739,0.9186,-61034.6182,24188.2704,False
+KwaZulu-Natal,Western Cape,-1513.6376,0.9997,-9772.1943,6744.9191,False
+Limpopo,Mpumalanga,808.2592,1.0,-17216.8949,18833.4134,False
+Limpopo,North West,1792.1728,1.0,-14151.9495,17736.2952,False
+Limpopo,Northern Cape,-3984.9806,1.0,-48699.8848,40729.9236,False
+Limpopo,Western Cape,12924.5557,0.2189,-2946.5258,28795.6372,False
+Mpumalanga,North West,983.9136,1.0,-11368.3218,13336.149,False
+Mpumalanga,Northern Cape,-4793.2398,1.0,-48356.8179,38770.3383,False
+Mpumalanga,Western Cape,12116.2965,0.0556,-141.5137,24374.1066,False
+North West,Northern Cape,-5777.1534,1.0,-48521.6758,36967.3689,False
+North West,Western Cape,11132.3828,0.0035,2212.5865,20052.1792,True
+Northern Cape,Western Cape,16909.5363,0.9503,-25807.7949,59626.8675,False
