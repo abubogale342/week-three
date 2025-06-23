@@ -1,0 +1,8 @@
+{
+  "test": "Chi-Square",
+  "chi2": 7.255926312995721,
+  "p_value": 0.026570248768437145,
+  "dof": 2,
+  "significant": true,
+  "effect_size": "Cramer's V: 0.002693550686713754"
+}
