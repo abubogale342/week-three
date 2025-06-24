@@ -1,0 +1,125 @@
+data:
+  input_file: "data/cleaned_insurance_data.csv"
+  output_dir: "data/processed"
+  test_size: 0.3  # Slightly larger test set for more training data
+  random_state: 42
+  sample_size: 0.05  # Reduced to 5% of data for testing
+
+features:
+  numerical:
+    # Core vehicle characteristics
+    - "cubiccapacity"  # Engine size
+    - "kilowatts"  # Engine power
+    - "SumInsured"  # Vehicle value
+    - "RegistrationYear"  # For calculating vehicle age
+    - "Cylinders"  # Number of cylinders
+    - "NumberOfDoors"  # Number of doors
+    
+    # Policy details
+    - "TotalPremium"  # Total premium amount
+    - "ExcessSelected"  # Excess amount
+    - "CalculatedPremiumPerTerm"  # Premium per term
+    
+    # Engineered features (will be created in code)
+    - "power_to_weight"  # Power-to-weight ratio
+
+  categorical:
+    # Geographic information
+    - "Province"
+    - "MainCrestaZone"
+    - "SubCrestaZone"
+    
+    # Vehicle information
+    - "VehicleType"
+    - "bodytype"
+    - "make"
+    - "Model"
+    - "AlarmImmobiliser"
+    - "TrackingDevice"
+    
+    # Policy details
+    - "CoverType"
+    - "CoverCategory"
+    - "TermFrequency"
+    - "ItemType"
+    
+    # Vehicle condition
+    - "NewVehicle"
+    - "WrittenOff"
+    - "Rebuilt"
+    - "Converted"
+    
+    # Demographic information
+    - "LegalType"
+    - "MaritalStatus"
+    - "Gender"
+    - "IsVATRegistered"
+
+  # Target variables
+  target_frequency: "HasClaim"  # Match the exact case from the data
+  target_severity: "TotalClaims"  # Match the exact case from the data
+
+model:
+  frequency:
+    model_type: "xgb_classifier"
+    params:
+      max_depth: [4] # Reduced from [4, 6]
+      learning_rate: [0.1] # Reduced from [0.01, 0.1]
+      n_estimators: [100] # Reduced from [100, 200]
+      min_child_weight: [3] # Reduced from [1, 3]
+      subsample: [0.8] # Reduced from [0.8, 1.0]
+      colsample_bytree: [0.8] # Reduced from [0.8, 1.0]
+      scale_pos_weight: [357] # Using the actual class imbalance ratio
+      tree_method: ["hist"] # More memory efficient
+      use_label_encoder: [False] # Avoid warning
+      eval_metric: ["aucpr"] # Better for imbalanced data
+  severity:
+    model_type: "xgb_regressor"
+    params:
+      max_depth: [6]
+      learning_rate: [0.1]
+      n_estimators: [100]
+
+evaluation:
+  metrics:
+    - "roc_auc"
+    - "average_precision"
+    - "f1"
+    - "precision"
+    - "recall"
+  cv_folds: 5
+  random_state: 42
+
+# Model interpretation settings
+interpretation:
+  top_n_features: 20
+  shap:
+    n_samples: 1000 # Number of samples to use for SHAP values calculation
+    plot_type: "dot" # Options: "dot", "bar", "violin"
+
+# Feature selection settings
+feature_selection:
+  method: "importance" # Options: "importance", "recursive", "selectkbest"
+  k_features: 30 # Number of top features to select
+
+# Class imbalance handling
+class_imbalance:
+  method: "class_weight" # Options: "class_weight", "smote", "adasyn", "none"
+  sampling_strategy: "auto" # For SMOTE/ADASYN
+
+# Cross-validation settings
+cross_validation:
+  n_splits: 5
+  shuffle: True
+  random_state: 42
+
+# Threshold optimization
+threshold_optimization:
+  method: "f1" # Metric to optimize the threshold for
+  cv: 5 # Number of cross-validation folds
+
+# Logging settings
+logging:
+  level: "INFO"
+  file: "logs/training.log"
+  console: True
